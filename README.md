@@ -1,5 +1,7 @@
 link menuju aplikasi Heroku : https://aplikasitugas2.herokuapp.com/katalog/
 
+1. ![photo_2022-09-14 15 28 42](https://user-images.githubusercontent.com/101639653/190104625-7045863f-cf59-42ed-9ab5-8ae5739bb889.jpeg)
+
 2. Virtual Environtment digunakan sebagai sebuah tempat untuk mengotak-atik sebuah projek seperti menginstall sesuatu untuk sebuah projek sehingga projek satu dengan projek yang lainnya terpisah environmentnya dan tidak saling mengganggu. Jadi sebagai sebuah sekat antara projek-projek, ketika satu projek sedang menginstall sesuatu maka projek lainnya tidak terpengaruh karena dibatasi oleh virtual environment tersebut. Sebenarnya tanpa virtual environment pun sebuah aplikasi tetap dapat berjalan namun menjadi tidak aman karena dapat memengaruhi aplikasi atau projek lainnya jika tidak memakai virtual environment.
 
 3. 1). menambahkan kode dibawah ini pada views.py sebagai pengambilan data dari model dan dikembalikan ke dalam sebuah HTML.
