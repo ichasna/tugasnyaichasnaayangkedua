@@ -1,5 +1,7 @@
 JAWABAN TUGAS 2 PBP
 
+link : https://aplikasitugas2.herokuapp.com/mywatchlist/
+
 1. Perbedaan HTML, JSON, XML 
 JSON
 - fungsi = transfer data
@@ -35,3 +37,9 @@ Ketika sudah melibatkan data yang besar, pasti membutuhkan data base untuk menyi
     5. Mengimplementasikan sebuah fitur untuk menyajikan data dengan format XML,HTML,JSON dengan membuat fungsi baru di file views.py
     6. Membuat routing dengan membuat file urls.py dan menambahkan path XML,HTML,JSON pada file tersebut
     7. Melakukan deployment ke Heroku dengan git add, commit, push perubahan tersebut ke github
+
+4. Screenshot
+![Screen Shot 2022-09-22 at 10 30 48 AM](https://user-images.githubusercontent.com/101639653/191652367-40db3f9b-c65d-41e7-b845-461f5139aced.png)
+![Screen Shot 2022-09-22 at 10 31 40 AM](https://user-images.githubusercontent.com/101639653/191652391-33ef00b4-0af9-4ed9-bd49-1e02af220fc1.png)
+![Screen Shot 2022-09-22 at 10 31 53 AM](https://user-images.githubusercontent.com/101639653/191652402-6ddf425a-53f4-4c05-9d37-0836c6f9a961.png)
+
