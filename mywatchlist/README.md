@@ -1,5 +1,7 @@
 JAWABAN TUGAS 2 PBP
 
+link : https://aplikasitugas2.herokuapp.com/mywatchlist/
+
 1. Perbedaan HTML, JSON, XML 
 JSON
 - fungsi = transfer data

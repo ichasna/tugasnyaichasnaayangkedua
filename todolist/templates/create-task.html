@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Todolist</title>
+{% endblock meta %}
+
+{% block content %}
+
+<div class = "create_new_task">
+
+    <h1>Tambah Task Baru</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Judul: </td>
+                <td><input type="text" name="title" placeholder="Judul.." class="form-control"></td>
+            </tr>
+                    
+            <tr>
+                <td>Deskripsi: </td>
+                <td><input type="text" name="description" placeholder="Desc.." class="form-control"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input class="btn submit_btn" type="submit" value="Tambahkan"></td>
+            </tr>
+        </table>
+    </form>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock content %}
