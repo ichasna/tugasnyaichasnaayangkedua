@@ -27,8 +27,6 @@ def create_task(request):
 
         if title != "" and description != "":
             Task.objects.create(title=title, description=description, date=datetime.date.today(), user=request.user)
-            info_message = 'Task "{title}" telah berhasil disimpan!'.format(title= title)
-            messages.info(request, info_message)
             return HttpResponseRedirect(reverse("todolist:todolist")) 
         
         messages.info(request, 'Judul atau Deskripsi belum diisi!')
