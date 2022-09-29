@@ -16,7 +16,6 @@ def todolist(request):
     context = {
     'tasks' : tasklist,
     'username' : request.user,
-    'last_login' : request.COOKIES['last_login'],
     }
     return render(request, "todolist.html", context)
 
@@ -66,3 +65,7 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
+
+def delete(request,id):
+    Task.objects.filter(pk=id).delete()
+    return HttpResponseRedirect(reverse("todolist:todolist"))
