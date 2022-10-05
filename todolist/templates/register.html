@@ -13,11 +13,18 @@
         border-style: outset;
         border-radius: 25px;
     }
+    .center-me {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100vh;
+      }
 </style>
 {% endblock meta %}
 
 {% block content %}  
-
+<div class="center-me">
 <div class = "register">
     
     <h1>Formulir Registrasi</h1>  
@@ -42,5 +49,6 @@
     {% endif %}
 
 </div>  
+</div>
 
 {% endblock content %}
