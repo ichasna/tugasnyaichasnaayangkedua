@@ -7,7 +7,7 @@
 
   h1 {
     text-align: center;
-    font-style: italic;
+    color: #1eb50d;
   }
   p {
     text-align: left;
@@ -32,7 +32,7 @@
     <h5 class="card-title">{{task.title}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{task.date}}</h6>
     <p class="card-text">{{task.description}}</p>
-    <button class="btn btn-outline-danger"><a href="{% url 'todolist:delete' task.id %}">Delete</a></button>
+    <button class="btn btn-danger"><a href="{% url 'todolist:delete' task.id %}" class="link-light">Delete</a></button>
   </div>
 </div>
 {% endfor %}
@@ -41,8 +41,8 @@
     {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
 
 <p></p>
-<button class="btn btn-outline-primary"><a href="{% url 'todolist:create_task' %}">Tambah Task</a></button>
+<button class="btn btn-primary"><a href="{% url 'todolist:create_task' %}" class="link-light">Tambah Task</a></button>
 
-<button class="btn btn-outline-primary"><a href="{% url 'todolist:logout' %}">Logout</a></button> 
+<button class="btn btn-primary"><a href="{% url 'todolist:logout' %}" class="link-light">Logout</a></button> 
 
 {% endblock content %}

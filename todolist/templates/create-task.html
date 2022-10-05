@@ -12,6 +12,7 @@
         padding: 10px;
         border-style: outset;
         border-radius: 25px;
+        box-shadow: 10px 10px 100px rgb(166, 166, 166);
     }
     .center-me {
         display: flex;
@@ -20,10 +21,14 @@
 
         height: 100vh;
       }
+      body {
+        background-image: url(https://cdn.discordapp.com/attachments/1002595520281325578/1027258247532511262/Glassmorphism_Loading_Animation_-_Study_from_Tutorial.gif);
+    }
 </style>
 {% endblock meta %}
 
 {% block content %}
+<body>
 <div class="center-me">
 <div class = "create_new_task">
 
@@ -58,5 +63,5 @@
     {% endif %}
 </div>
 </div>
-
+</body>
 {% endblock content %}
