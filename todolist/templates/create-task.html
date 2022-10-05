@@ -2,6 +2,18 @@
 
 {% block meta %}
 <title>Todolist</title>
+<style>
+    .create_new_task {
+        text-align:center;
+        font-family: arial, sans-serif;
+        border: 6px solid #349beb;
+        width: 50%;
+        margin:auto;
+        padding: 10px;
+        border-style: outset;
+        border-radius: 25px;
+    }
+</style>
 {% endblock meta %}
 
 {% block content %}
@@ -25,7 +37,7 @@
 
             <tr>
                 <td></td>
-                <td><input class="btn submit_btn" type="submit" value="Tambahkan"></td>
+                <td><input class="btn btn-primary" type="submit" value="Tambahkan"></td>
             </tr>
         </table>
     </form>
