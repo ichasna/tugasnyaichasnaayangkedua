@@ -1,3 +1,5 @@
+link : https://aplikasitugas2.herokuapp.com/todolist/login/?next=/todolist/
+
 1. Csrf token merupakan sebuah random string yang di-generate setiap kali halaman form muncul. Gunanya untuk sebagai pengaman agar mencegah CSRF attack dengan mengirimkan informasi tambahan pada setiap pengiriman data ke server. Informasi tersebut berisi nilai acak yang sudah diatur parameternya oleh aplikasi web. Nilai acak tersebut berfungsi untuk menentukan apakah permintaan tersebut berasal dari pengguna yang memiliki otoritas atau bukan. 
 
 2. Kita dapat membuat elemen form sendiri secara manual. Secara garis besar, caranya buat file forms.py dahulu, lagu di dalem file tersebut import library form dan class yang ada di model yang ingin dihidupkan objeknya. Lalu di file tersebut mendefinisikan modelnya sebagai class yang objeknya ingin dihidupkan dari models.py. Lalu dibuat formnya berdasarkan atribut yang dimiliki modelnya.
