@@ -4,7 +4,6 @@
 <title>Todolist</title>
 <meta name="viewport", content="width=device-width, initial-scale=1.0">
 <style>
-
   h1 {
     text-align: center;
     color: #1eb50d;
@@ -43,6 +42,7 @@
 <p></p>
 <button class="btn btn-primary"><a href="{% url 'todolist:create_task' %}" class="link-light">Tambah Task</a></button>
 
-<button class="btn btn-primary"><a href="{% url 'todolist:logout' %}" class="link-light">Logout</a></button> 
+<button class="btn btn-primary"><a href="{% url 'todolist:logout' %}" class="link-light">Logout</a></button>
+<button class="btn btn-primary"><a href="{% url 'todolist:show_todolist_json' %}" class="link-light">To Do List versi AJAX</a></button> 
 
 {% endblock content %}

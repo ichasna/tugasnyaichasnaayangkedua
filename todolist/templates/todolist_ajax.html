@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Todolist</title>
+<meta name="viewport", content="width=device-width, initial-scale=1.0"></meta>
+<style>
+  h1 {
+    text-align: center;
+    color: #1eb50d;
+  }
+  p {
+    text-align: left;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+  }
+</style>
+{% endblock meta %}
+
+{% block content %}
+<head>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+        </script>
+          
+        <!-- Script to get JSON file and display its content -->
+        <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            $.get("http://127.0.0.1:8000/todolist/json/", function(todolist) {
+                console.log(todolist);
+                for (i = 0; i < todolist.length; i++){
+                    $(".task_list").append(` <div class="grid-container">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">${todolist[i].fields.title}</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">${todolist[i].fields.date}</h6>
+                          <p class="card-text">${todolist[i].fields.description}</p>
+                        </div>
+                      </div>
+                    </div>`)
+                }
+            });
+            $("#submit").click(function(){
+              $.post("http://127.0.0.1:8000/todolist/add/", {
+                title : $('#title').val(),
+                description: $('#description').val()},
+                function (result) {
+                  $(".task_list").append(` <div class="grid-container"> <div class="card" style="max-width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">${result.fields.title}</h5>
+                        <p class="card-text">${result.fields.date}</p>
+                        <p class="card-text">${result.fields.description}</p>
+                      </div>`)
+                  $('#title').val(''),
+                  $('#description').val('')
+                }
+                )
+              })
+        }); 
+        </script>
+</head>
+
+<body>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Task Baru</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="">
+          {% csrf_token %}
+          <table>
+              <tr>
+                  <td>Judul: </td>
+                  <td><input type="text" name="title" placeholder="Judul.." class="form-control" id="title"></td>
+              </tr>
+                      
+              <tr>
+                  <td>Deskripsi: </td>
+                  <td><input type="text" name="description" placeholder="Desc.." class="form-control" id="description"></td>
+              </tr>
+          </table>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="submit" data-bs-dismiss="modal">Tambahkan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+
+<h1> Welcome To {{ username }}'s To Do List !</h1>
+<p>Username: {{ username }}</p>
+    
+<div class="task_list"></div>
+
+  <p></p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Tambah Task</button>
+
+<button class="btn btn-primary"><a href="{% url 'todolist:logout' %}" class="link-light">Logout</a></button> 
+<button class="btn btn-primary"><a href="{% url 'todolist:todolist' %}" class="link-light">To Do List Original</a></button>
+</body>
+
+{% endblock content %}

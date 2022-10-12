@@ -1,13 +1,17 @@
+from re import T
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 import datetime
 from todolist.models import *
+from django.http import HttpResponse
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 @login_required(login_url='login/')
@@ -69,3 +73,36 @@ def logout_user(request):
 def delete(request,id):
     Task.objects.filter(pk=id).delete()
     return HttpResponseRedirect(reverse("todolist:todolist"))
+
+def show_json(request):
+    data = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_todolist_json(request):
+    tasklist = Task.objects.filter(user=request.user)
+    context = {
+    'tasks' : tasklist,
+    'username' : request.user,
+    }
+    return render(request, "todolist_ajax.html", context)
+
+@csrf_exempt
+def create_task_modal(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        date = datetime.date.today()
+        user = request.user
+        task = Task.objects.create(title=title, description=description, date=date, user=user)
+
+        result = {
+            'fields':{
+                'title':task.title,
+                'description':task.description,
+                'date':task.date,
+            },
+            'pk':task.pk
+        }
+
+        print(result)
+        return JsonResponse(result)
