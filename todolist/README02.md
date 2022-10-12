@@ -21,14 +21,14 @@
     Kekurangan : Prioritas terakhir
 
 2. Jelaskan tag HTML5 yang kamu ketahui !
---> <body> : Mendefinisikan konten dari suatu dokumen
-    <button> : Membuat tombol yang bisa di klik
-    <div> : Menspesifikasi suatu bagian di dalam dokumen
-    <head> : Mendifisikan bagian head dari dokumen (contohnya title,style)
-    <h1> sampai <h6> : Untuk heading html
-    <p> : Untuk paragraf
-    <table> : Untuk membuat tabel
-    <style> : Memasukkan informasi style
+--> `<body>` : Mendefinisikan konten dari suatu dokumen
+    `<button>` : Membuat tombol yang bisa di klik
+    `<div>` : Menspesifikasi suatu bagian di dalam dokumen
+    `<head>` : Mendifisikan bagian head dari dokumen (contohnya title,style)
+    `<h1>` sampai <h6> : Untuk heading html
+    `<p>` : Untuk paragraf
+    `<table>` : Untuk membuat tabel
+    `<style>` : Memasukkan informasi style
 
 3. Jelaskan tipe-tipe CSS selector yang kamu ketahui !
 --> *Element Selector
