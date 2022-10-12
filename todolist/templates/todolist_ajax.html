@@ -29,7 +29,7 @@
         <!-- Script to get JSON file and display its content -->
         <script type="text/javascript" language="javascript">
         $(document).ready(function() {
-            $.get("http://127.0.0.1:8000/todolist/json/", function(todolist) {
+            $.get("/todolist/json/", function(todolist) {
                 console.log(todolist);
                 for (i = 0; i < todolist.length; i++){
                     $(".task_list").append(` <div class="grid-container">
@@ -44,7 +44,7 @@
                 }
             });
             $("#submit").click(function(){
-              $.post("http://127.0.0.1:8000/todolist/add/", {
+              $.post("/todolist/add/", {
                 title : $('#title').val(),
                 description: $('#description').val()},
                 function (result) {
