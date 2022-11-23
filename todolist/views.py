@@ -103,6 +103,4 @@ def create_task_modal(request):
             },
             'pk':task.pk
         }
-
-        print(result)
         return JsonResponse(result)

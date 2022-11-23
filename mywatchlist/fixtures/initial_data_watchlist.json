@@ -3,7 +3,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 1,
         "fields": {
-            "watched": "Sudah",
+            "watched": true,
             "title": "Ada Apa Dengan Cinta",
             "rating": 4.5,
             "release_date": "8 Februari 2002",
@@ -14,7 +14,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 2,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "Miracle in Cell no. 7",
             "rating": 4.7,
             "release_date": "8 September 2022",
@@ -25,7 +25,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 3,
         "fields": {
-            "watched": "Sudah",
+            "watched": true,
             "title": "Mencuri Raden Saleh",
             "rating": 4.0,
             "release_date": "25 Agustus 2022",
@@ -36,7 +36,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 4,
         "fields": {
-            "watched": "Sudah",
+            "watched": true,
             "title": "The Batman",
             "rating": 5.0,
             "release_date": "2 Maret 2022",
@@ -47,7 +47,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 5,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "Frozen 2",
             "rating": 4.5,
             "release_date": "20 November 2019",
@@ -58,7 +58,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 6,
         "fields": {
-            "watched": "Sudah",
+            "watched": true,
             "title": "Moana",
             "rating": 4.5,
             "release_date": "25 November 2016",
@@ -69,7 +69,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 7,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "Raya and the Last Dragon",
             "rating": 4.6,
             "release_date": "3 Maret 2021",
@@ -80,7 +80,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 8,
         "fields": {
-            "watched": "Sudah",
+            "watched": true,
             "title": "Mean Girls",
             "rating": 4.0,
             "release_date": "30 April 2004",
@@ -91,7 +91,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 9,
         "fields": {
-            "watched": "Sudah",
+            "watched": true,
             "title": "Joker",
             "rating": 5.0,
             "release_date": "2 Oktober 2019",
@@ -102,7 +102,7 @@
         "model": "mywatchlist.watchlist",
         "pk": 10,
         "fields": {
-            "watched": "Belum",
+            "watched": false,
             "title": "Suicide Squad",
             "rating": 3.7,
             "release_date": "3 Agustus 2016",

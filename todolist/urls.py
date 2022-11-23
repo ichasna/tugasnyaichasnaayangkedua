@@ -14,3 +14,4 @@ urlpatterns = [
     path('add/', create_task_modal, name='create_task_modal'),
     path('json_ajax/', show_todolist_json, name='show_todolist_json'),  #mengarah ke todolist_ajax.html
 ]
+

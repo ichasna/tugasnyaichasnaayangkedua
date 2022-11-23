@@ -30,7 +30,6 @@
         <script type="text/javascript" language="javascript">
         $(document).ready(function() {
             $.get("/todolist/json/", function(todolist) {
-                console.log(todolist);
                 for (i = 0; i < todolist.length; i++){
                     $(".task_list").append(` <div class="grid-container">
                     <div class="card" style="width: 18rem;">
